@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+<head>
+  <title>Projeto</title>
+  <link href='assets/css/reset.css' rel='stylesheet'>
+  <link href="assets/css/style.css" rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed|Source+Serif+Pro&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="assets/js/codes.js"></script>
+  <script src="assets/js/projeto.js"></script>
+  <meta charset="utf-8">
+
+</head>
+
+<body>
+
+  <header class="header">
+    <a href="index.html"><img class="logo" src="assets/img/logo.png" alt="logo"></a>  
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      
+      <li><a href="index.html">Home</a></li>
+      {{#each portfolio}}
+      <li><a href="categoria.html?key={{@key}}">{{this.categoria}}</a></li>
+      {{/each}}
+    </ul>
+
+
+  </header>
+	<div class="loader hidden">Loading...<img src="assets/img/octo-loader.gif" alt="Carregando"></div>
+
+	<main class= "conteudo-proj">
+		
+
+		<div class="titulo">
+
+			<p class="paragrafo-meio">{{this.titulo}}</p>
+
+			
+			<img class = "projeto-img" src="assets/img/{{@key}}.jpg"  alt="{{@key}}">
+			</div>
+
+			<div class="text-proj">
+				<h3 class="tit">
+					Descrição:
+				</h3>
+				<p>{{this.descricao}}</p>
+				<br>
+
+
+				<h3 class="tit">Equipe:</h3>
+				<p>{{this.equipe}}</p>
+				<br>
+
+				<h3 class="tit">Materiais:</h3>
+				<p>{{this.materiais}}</p>
+
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>	

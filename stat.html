@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+<head>
+  <title>Portfólio</title>
+  <link href='assets/css/reset.css' rel='stylesheet'>
+  <link href="assets/css/style.css" rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed|Source+Serif+Pro&display=swap" rel="  <meta charset="utf-8">
+    <script src="assets/js/codes.js"></script>
+  <script src="assets/js/categoria.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html"><img class="logo" src="assets/img/logo.png" alt="logo"></a>  
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+        
+      <li><a href="index.html">Home</a></li>
+      {{#each categorias}}
+      <li><a href="categoria.html?key={{@key}}">{{this.categoria}}</a></li>
+      {{/each}}
+
+    </ul>
+  </header>
+
+  <main>
+
+    <div class="bloco">
+      <h2 class="paragrafo-meio">Oii, sou o X</h2>
+      <button class="botao"><a href ="main.html">Quem eu sou?</a></button>
+      <button class="botao"><a href ="index.html">Veja meus trabalhos </a></button>
+
+    </div> 
+
+      </div>
+    </div>
+  </main>
+</body>
+  

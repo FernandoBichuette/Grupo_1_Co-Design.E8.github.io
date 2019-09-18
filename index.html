@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+<head>
+	<title>Portfólio</title>
+	<link href='assets/css/reset.css' rel='stylesheet'>
+	<link href="assets/css/style.css" rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed|Source+Serif+Pro&display=swap" rel="stylesheet">
+  <script src="assets/js/codes.js"></script>
+  <script src="assets/js/index.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+
+</head>
+
+<body>
+
+  <header class="header">
+    <a href="index.html"><img class="logo" src="assets/img/logo.png" alt="logo"></a>  
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      
+      <li><a href="index.html">Home</a></li>
+      {{#each portfolio}}
+      <li><a href="categoria.html?key={{@key}}">{{this.categoria}}</a></li>
+      {{/each}}
+    </ul>
+
+  </header>
+  <div class="loader hidden">Loading...<img src="assets/img/octo-loader.gif" alt="Carregando"></div>
+
+    
+
+
+    <main class="main">
+      <div class="titulo">
+       <p class="paragrafo-meio">Portfólio sobre projetos</p>
+
+       <img class="categoria-img"src="assets/img/portfolio.png"  alt="Portfólio">
+
+     </div>	
+
+     <ul class="menu-secao">
+      {{#each portfolio}}
+
+
+       <li class="secao-items">
+        <img class="secao-menu-imagem" src="assets/img/{{@key}}.jpg" alt="{{this.categoria}}">
+        <div class="texto">
+         <p>
+          <a class = "secao-titulo-items" href="categoria.html?key={{@key}}">{{this.categoria}}</a>
+        </p>
+        <p>
+         {{this.descricao}}
+
+        </p>
+      </div>
+     </li>
+     {{/each}}
+</ul>
+</main>
+</body>
+</html>

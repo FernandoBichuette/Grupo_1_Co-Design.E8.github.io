@@ -1,0 +1,194 @@
+/*Pagina inicial*/
+
+
+button.botao
+a.btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0;
+  cursor: pointer;
+  font-family:  'Source Serif Pro', serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 2rem 1.0625rem 2rem;
+  font-size: 1rem;
+  background-color: #2ba6cb;
+  border-color: #2285a2;
+  color: #fff;
+  transition: background-color 300ms ease-out; }
+
+button.botao
+a.btn {
+  background: #333;
+  color: #fff;
+  border: 1px solid #fff;
+  font-family: 'Encode Sans Semi Condensed', sans-serif;
+  margin: 2.5px;
+  font-size: .85em;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 800;
+  vertical-align: top;
+  -webkit-transition: background ease-in-out 0.2s;
+  -moz-transition: background ease-in-out 0.2s;
+  -ms-transition: background ease-in-out 0.2s;
+  -o-transition: background ease-in-out 0.2s;
+  transition: background ease-in-out 0.2s; }
+
+button.botao.ghost,
+a.btn.ghost {
+  margin-top: 1em;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  font-family:  'Source Serif Pro', serif;
+  transition: box-shadow ease; }
+
+button.botao.ghost.full,
+a.btn.ghost.full {
+  display: block;
+  margin-top: 1em;
+  width: 100%; }
+
+button.btn:hover,
+a.btn:hover {
+  box-shadow: 2px 2px 2px;
+  border: 1px solid #fff;
+  color: #fff; }
+.stat{
+  background-color: #2E4052;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  padding: 28px 20px;
+  user-select: none;
+  background-color:#2E4052;
+
+}
+
+.header .menu-icon .navicon {
+  background: #EFB607;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #EFB607;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background-color: #2E4052;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+/*menu que fica na parte de cima*/
+.header {
+  background-color: #2E4052;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  margin-top: -2rem;
+
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #2E4052;
+
+}
+
+.header li{
+  font-size: 1rem;
+
+}
+
+.logo{
+  display:flex;
+  margin:0.5rem;
+  width:3rem;
+  height:3rem;
+  float:right;
+
+
+}
+
+.header li a {
+  display: block;
+  padding: 0.5rem 0.5rem;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+  border-style: none none solid none;
+  border-color:red;
+}
+
+.header li a:hover {
+  display: block;
+  padding: 0.5rem 0.5rem;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+  background-color: #FFC700
+
+
+}
