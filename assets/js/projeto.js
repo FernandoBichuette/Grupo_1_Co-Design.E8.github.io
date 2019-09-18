@@ -13,9 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     context = data['portfolio'][value2]['projetos'][value]
     coDesReplace('.conteudo-proj',context)
-
-    context = data['portfolio'][value]
-    coDesReplace('.projeto-img',context)
+    coDesReplace('.projeto-img',context)  
+    console.log(context)
 
     })
 })
