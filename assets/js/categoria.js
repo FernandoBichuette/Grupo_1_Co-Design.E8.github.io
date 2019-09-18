@@ -19,5 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     context = data['portfolio'][value]
     coDesReplace('.categoria-secao',context)
+    coDesReplace('.titulo',context)
+    console.log(context)
   })
 })
